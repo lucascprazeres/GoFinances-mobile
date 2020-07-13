@@ -27,7 +27,7 @@ export const Logo = styled.Image`
 
 export const Date = styled.Text`
   font-family: 'Poppins-Regular';
-  font-size: 14px;
+  font-size: 12px;
   line-height: 21px;
 
   color: #fff;
@@ -49,7 +49,7 @@ export const CardScroll = styled.ScrollView.attrs({
 
 export const Title = styled.Text`
   font-family: 'Poppins-Regular';
-  font-size: 22px;
+  font-size: 20px;
   line-height: 30px;
 
   color: #000;

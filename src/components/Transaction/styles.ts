@@ -29,7 +29,7 @@ export const TitleContainer = styled.View`
 
 export const Ammount = styled.Text`
   font-family: 'Poppins-Regular';
-  font-size: 22px;
+  font-size: 20px;
   line-height: 30px;
 
   margin-top: 2px;
@@ -58,7 +58,7 @@ export const Icon = styled.Image`
 
 export const Type = styled.Text`
   font-family: 'Poppins-Regular';
-  font-size: 16px;
+  font-size: 14px;
   line-height: 21px;
 
   color: #969cb3;
@@ -66,7 +66,7 @@ export const Type = styled.Text`
 
 export const Date = styled.Text`
   font-family: 'Poppins-Regular';
-  font-size: 16px;
+  font-size: 14px;
   line-height: 21px;
 
   color: #969cb3;

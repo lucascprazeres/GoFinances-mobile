@@ -25,7 +25,7 @@ export const CardTitleContainer = styled.View`
 
 export const CardTitle = styled.Text`
   font-family: 'Poppins-Regular';
-  font-size: 16px;
+  font-size: 14px;
   line-height: 21px;
 
   color: ${({ total }: CardProps) => (total ? '#fff' : '#363f5f')};
@@ -52,7 +52,7 @@ export const Ammount = styled.Text`
 
 export const LastTransaction = styled.Text`
   font-family: 'Poppins-Regular';
-  font-size: 14px;
+  font-size: 12px;
   line-height: 18px;
 
   color: ${({ total }: CardProps) => (total ? '#fff' : '#969cb3')};
