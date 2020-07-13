@@ -26,7 +26,7 @@ export const Logo = styled.Image`
 `;
 
 export const Date = styled.Text`
-  font-family: Poppins;
+  font-family: 'Poppins-Regular';
   font-size: 14px;
   line-height: 21px;
 
@@ -48,7 +48,7 @@ export const CardScroll = styled.ScrollView.attrs({
 })``;
 
 export const Title = styled.Text`
-  font-family: Poppins;
+  font-family: 'Poppins-Regular';
   font-size: 22px;
   line-height: 30px;
 

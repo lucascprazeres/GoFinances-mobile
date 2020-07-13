@@ -15,7 +15,7 @@ export const Container = styled.View`
 `;
 
 export const Title = styled.Text`
-  font-family: Poppins;
+  font-family: 'Poppins-Regular';
   font-size: 16px;
   line-height: 21px;
 
@@ -28,7 +28,7 @@ export const TitleContainer = styled.View`
 `;
 
 export const Ammount = styled.Text`
-  font-family: Poppins;
+  font-family: 'Poppins-Regular';
   font-size: 22px;
   line-height: 30px;
 
@@ -57,7 +57,7 @@ export const Icon = styled.Image`
 `;
 
 export const Type = styled.Text`
-  font-family: Poppins;
+  font-family: 'Poppins-Regular';
   font-size: 16px;
   line-height: 21px;
 
@@ -65,7 +65,7 @@ export const Type = styled.Text`
 `;
 
 export const Date = styled.Text`
-  font-family: Poppins;
+  font-family: 'Poppins-Regular';
   font-size: 16px;
   line-height: 21px;
 

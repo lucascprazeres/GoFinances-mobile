@@ -24,7 +24,7 @@ export const CardTitleContainer = styled.View`
 `;
 
 export const CardTitle = styled.Text`
-  font-family: Poppins;
+  font-family: 'Poppins-Regular';
   font-size: 16px;
   line-height: 21px;
 
@@ -43,7 +43,7 @@ export const AmmountContainer = styled.View`
 `;
 
 export const Ammount = styled.Text`
-  font-family: Poppins;
+  font-family: 'Poppins-Regular';
   font-size: 30px;
   line-height: 45px;
 
@@ -51,7 +51,7 @@ export const Ammount = styled.Text`
 `;
 
 export const LastTransaction = styled.Text`
-  font-family: Poppins;
+  font-family: 'Poppins-Regular';
   font-size: 14px;
   line-height: 18px;
 
