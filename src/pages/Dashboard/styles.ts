@@ -4,6 +4,7 @@ export const Container = styled.ScrollView.attrs({
   showsVerticalScrollIndicator: false,
 })`
   flex: 1;
+  margin-bottom: 32px;
 `;
 
 export const Header = styled.View`
