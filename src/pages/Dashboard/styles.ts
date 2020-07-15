@@ -4,7 +4,6 @@ export const Container = styled.ScrollView.attrs({
   showsVerticalScrollIndicator: false,
 })`
   flex: 1;
-  background-color: #e5e5e5;
 `;
 
 export const Header = styled.View`
@@ -41,7 +40,7 @@ export const DashboardBody = styled.View`
 export const CardScroll = styled.ScrollView.attrs({
   horizontal: true,
   contentContainerStyle: {
-    paddingLeft: 32,
+    paddingLeft: 8,
     paddingRight: 32,
   },
   showsHorizontalScrollIndicator: false,
