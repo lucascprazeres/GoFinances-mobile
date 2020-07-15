@@ -1,10 +1,10 @@
-import React from 'react';
+import React, { ReactComponentElement } from 'react';
 
 import {
   CardContainer,
   CardTitleContainer,
   CardTitle,
-  CardLogo,
+  IconContainer,
   AmmountContainer,
   Ammount,
   LastTransaction,
@@ -12,7 +12,7 @@ import {
 
 interface CardProps {
   title: string;
-  icon: URL;
+  icon: React.FC;
   ammount: string;
   lastTransactionSentence: string;
   total?: boolean;
@@ -20,7 +20,7 @@ interface CardProps {
 
 const Card: React.FC<CardProps> = ({
   title,
-  icon,
+  icon: Icon,
   ammount,
   lastTransactionSentence,
   total,
@@ -28,7 +28,9 @@ const Card: React.FC<CardProps> = ({
   <CardContainer total={total && total}>
     <CardTitleContainer>
       <CardTitle total={total && total}>{title}</CardTitle>
-      <CardLogo source={icon} />
+      <IconContainer>
+        <Icon />
+      </IconContainer>
     </CardTitleContainer>
 
     <AmmountContainer>

@@ -52,7 +52,7 @@ export const TypeContainer = styled.View`
   margin-top: 20px;
 `;
 
-export const Icon = styled.Image`
+export const IconContainer = styled.View`
   margin-right: 16px;
 `;
 

@@ -1,15 +1,15 @@
 import React from 'react';
 
-import dollarImg from '../../assets/vendas.png';
+import DollarSVG from '../../assets/sales.svg';
 
 import {
   Container,
   Title,
   TitleContainer,
   Ammount,
+  IconContainer,
   TransactionFooter,
   TypeContainer,
-  Icon,
   Type,
   Date,
 } from './styles';
@@ -35,7 +35,9 @@ const Transaction: React.FC<TransactionProps> = ({
 
     <TransactionFooter>
       <TypeContainer>
-        <Icon source={dollarImg} />
+        <IconContainer>
+          <DollarSVG />
+        </IconContainer>
         <Type>{category}</Type>
       </TypeContainer>
 

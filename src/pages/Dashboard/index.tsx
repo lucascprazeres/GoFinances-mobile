@@ -1,9 +1,9 @@
 import React from 'react';
 
 import logoImg from '../../assets/logo.png';
-import incomeImg from '../../assets/income.png';
-import outcomeImg from '../../assets/outcome.png';
-import totalImg from '../../assets/total.png';
+import Income from '../../assets/income.svg';
+import Outcome from '../../assets/outcome.svg';
+import Total from '../../assets/total.svg';
 
 import Card from '../../components/Card';
 import Transaction from '../../components/Transaction';
@@ -38,21 +38,21 @@ const Dashboard: React.FC = () => {
             <Card
               title="Entradas"
               ammount="R$ 17.400,00"
-              icon={incomeImg}
+              icon={Income}
               lastTransactionSentence="Última entrada dia 10 de julho"
             />
 
             <Card
               title="Saídas"
               ammount="R$ 1.259,00"
-              icon={outcomeImg}
+              icon={Outcome}
               lastTransactionSentence="Última saída dia 7 de julho"
             />
 
             <Card
               title="Total"
               ammount="R$ 16.141,00"
-              icon={totalImg}
+              icon={Total}
               lastTransactionSentence="De 01 a 10 de julho"
               total
             />

@@ -33,7 +33,7 @@ export const CardTitle = styled.Text`
   margin-left: 24px;
 `;
 
-export const CardLogo = styled.Image`
+export const IconContainer = styled.View`
   margin-right: 20px;
 `;
 

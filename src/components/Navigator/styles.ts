@@ -1,5 +1,7 @@
 import styled, { css } from 'styled-components/native';
 
+import ListSVG from '../../assets/listagem.svg';
+
 interface NavigatorProps {
   active?: boolean;
 }
@@ -33,8 +35,6 @@ export const LinkContainer = styled.TouchableOpacity<NavigatorProps>`
         `
       : ''}
 `;
-
-export const LinkIcon = styled.Image``;
 
 export const LinkText = styled.Text`
   font-family: 'Poppins-Regular';

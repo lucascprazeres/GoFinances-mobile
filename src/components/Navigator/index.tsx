@@ -1,10 +1,14 @@
 import React, { useState, useEffect } from 'react';
+import { View } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 
-import dollarIcon from '../../assets/vendas.png';
-import listIcon from '../../assets/listagem.png';
+import ListSVG from '../../assets/listagem.svg';
+import ActiveListSVG from '../../assets/listagem-ativada.svg';
 
-import { Container, LinkContainer, LinkIcon, LinkText } from './styles';
+import DollarSVG from '../../assets/dollar.svg';
+import ActiveDollartSVG from '../../assets/dollar-ativado.svg';
+
+import { Container, LinkContainer, LinkText } from './styles';
 
 const additionalStyle = {
   shadowColor: '#000',
@@ -38,13 +42,20 @@ const Navigator: React.FC<NavigatorProps> = ({
   function handleNavigation(page: 'Dashboard' | 'FormPage') {
     navigator.navigate(page);
   }
+
+  const ListIcon =
+    currentPage === 'Dashboard' ? <ActiveListSVG /> : <ListSVG />;
+
+  const DollarIcon =
+    currentPage === 'FormPage' ? <ActiveDollartSVG /> : <DollarSVG />;
+
   return (
     <Container style={additionalStyle}>
       <LinkContainer
         active={currentActivateLink === 'Dashboard'}
         onPress={() => handleNavigation('Dashboard')}
       >
-        <LinkIcon source={listIcon} />
+        {ListIcon}
         <LinkText>Listagem</LinkText>
       </LinkContainer>
 
@@ -52,7 +63,7 @@ const Navigator: React.FC<NavigatorProps> = ({
         active={currentActivateLink === 'FormPage'}
         onPress={() => handleNavigation('FormPage')}
       >
-        <LinkIcon source={dollarIcon} />
+        {DollarIcon}
         <LinkText>Cadastrar</LinkText>
       </LinkContainer>
     </Container>
