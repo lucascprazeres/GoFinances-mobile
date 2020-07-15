@@ -7,33 +7,6 @@ export const Container = styled.ScrollView.attrs({
   margin-bottom: 32px;
 `;
 
-export const Header = styled.View`
-  width: 100%;
-  height: 270px;
-
-  background-color: #5636d3;
-`;
-
-export const HeaderContent = styled.View`
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-around;
-  margin-top: 40px;
-`;
-
-export const Logo = styled.Image`
-  width: 176px;
-`;
-
-export const Date = styled.Text`
-  font-family: 'Poppins-Regular';
-  font-size: 12px;
-  line-height: 21px;
-
-  color: #fff;
-  opacity: 0.6;
-`;
-
 export const DashboardBody = styled.View`
   margin-top: -160px;
 `;

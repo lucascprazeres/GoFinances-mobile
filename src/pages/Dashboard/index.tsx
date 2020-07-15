@@ -1,20 +1,16 @@
 import React from 'react';
 
-import logoImg from '../../assets/logo.png';
 import Income from '../../assets/income.svg';
 import Outcome from '../../assets/outcome.svg';
 import Total from '../../assets/total.svg';
 
+import Header from '../../components/Header';
 import Card from '../../components/Card';
 import Transaction from '../../components/Transaction';
 import Navigator from '../../components/Navigator';
 
 import {
   Container,
-  Header,
-  HeaderContent,
-  Logo,
-  Date,
   DashboardBody,
   CardScroll,
   Title,
@@ -25,14 +21,7 @@ const Dashboard: React.FC = () => {
   return (
     <>
       <Container>
-        <Header>
-          <HeaderContent>
-            <Logo source={logoImg} />
-
-            <Date>12 de Julho</Date>
-          </HeaderContent>
-        </Header>
-
+        <Header />
         <DashboardBody>
           <CardScroll>
             <Card
