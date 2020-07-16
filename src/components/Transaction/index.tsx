@@ -14,10 +14,12 @@ import {
   Date,
 } from './styles';
 
+import formatValue from '../../utils/formatValue';
+
 interface TransactionProps {
   title: string;
   type: 'income' | 'outcome';
-  value: string;
+  value: number;
   category: string;
 }
 
@@ -30,7 +32,7 @@ const Transaction: React.FC<TransactionProps> = ({
   <Container>
     <TitleContainer>
       <Title>{title}</Title>
-      <Ammount type={type}>{value}</Ammount>
+      <Ammount type={type}>{formatValue(value)}</Ammount>
     </TitleContainer>
 
     <TransactionFooter>

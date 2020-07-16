@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 
 import Income from '../../assets/income.svg';
 import Outcome from '../../assets/outcome.svg';
@@ -9,6 +9,8 @@ import Card from '../../components/Card';
 import Transaction from '../../components/Transaction';
 import Navigator from '../../components/Navigator';
 
+import api from '../../services/api';
+
 import {
   Container,
   DashboardBody,
@@ -17,7 +19,26 @@ import {
   TransactionList,
 } from './styles';
 
+interface Transaction {
+  id: string;
+  title: string;
+  type: 'income' | 'outcome';
+  value: number;
+  category: { title: string };
+}
+
 const Dashboard: React.FC = () => {
+  const [transactions, setTransactions] = useState<Transaction[]>([]);
+
+  useEffect(() => {
+    async function loadData() {
+      const response = await api.get('transactions');
+      const fetchedTransactions = response.data.transactions;
+      setTransactions(fetchedTransactions);
+    }
+    loadData();
+  }, []);
+
   return (
     <>
       <Container>
@@ -49,35 +70,18 @@ const Dashboard: React.FC = () => {
 
           <Title>Listagem</Title>
 
-          <TransactionList>
-            <Transaction
-              title="Desenvolvimento de Site"
-              type="income"
-              value="R$ 12.000,00"
-              category="Vendas"
-            />
-
-            <Transaction
-              title="Hamburgueria Pizzy"
-              type="outcome"
-              value="- R$ 59,00"
-              category="Alimentação"
-            />
-
-            <Transaction
-              title="Aluguel do Apartamento"
-              type="outcome"
-              value="- R$ 1.200,00"
-              category="Casa"
-            />
-
-            <Transaction
-              title="Computador"
-              type="income"
-              value="R$ 5.400,00"
-              category="Vendas"
-            />
-          </TransactionList>
+          <TransactionList
+            data={transactions}
+            keyExtractor={transaction => transaction.id}
+            renderItem={({ item }: { item: Transaction }) => (
+              <Transaction
+                title={item.title}
+                type={item.type}
+                value={item.value}
+                category={item.category.title}
+              />
+            )}
+          />
         </DashboardBody>
       </Container>
       <Navigator currentPage="Dashboard" />
