@@ -44,3 +44,7 @@ export const TypeText = styled.Text`
 
   color: #363f5f;
 `;
+
+export const InvisibleInput = styled.TextInput`
+  display: none;
+`;

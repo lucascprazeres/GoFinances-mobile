@@ -28,14 +28,14 @@ interface Transaction {
 }
 
 interface Balance {
-  title: string;
+  total: string;
   income: string;
   outcome: string;
 }
 
 const Dashboard: React.FC = () => {
   const [transactions, setTransactions] = useState<Transaction[]>([]);
-  const [balance, setBalance] = useState<Balance[]>([]);
+  const [balance, setBalance] = useState<Balance>([]);
 
   useEffect(() => {
     async function loadData() {
@@ -57,21 +57,21 @@ const Dashboard: React.FC = () => {
           <CardScroll>
             <Card
               title="Entradas"
-              ammount={balance.income}
+              ammount={Number(balance.income)}
               icon={Income}
               lastTransactionSentence="Última entrada dia 10 de julho"
             />
 
             <Card
               title="Saídas"
-              ammount={balance.outcome}
+              ammount={Number(balance.outcome)}
               icon={Outcome}
               lastTransactionSentence="Última saída dia 7 de julho"
             />
 
             <Card
               title="Total"
-              ammount={balance.total}
+              ammount={Number(balance.total)}
               icon={Total}
               lastTransactionSentence="De 01 a 10 de julho"
               total

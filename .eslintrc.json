@@ -30,6 +30,8 @@
   ],
   "rules": {
     "prettier/prettier": "error",
+    "react/prop-types": "off",
+    "react/jsx-props-no-spreading": "off",
     "react/require-default-props": "off",
     "global-require": "off",
     "react-hooks/rules-of-hooks": "error",

@@ -1,21 +1,44 @@
-import React, { useState, useCallback } from 'react';
+import React, { useState, useEffect, useRef, useCallback } from 'react';
+
+import { TextInputProps } from 'react-native';
+
+import { useField } from '@unform/core';
 
 import Income from '../../assets/income.svg';
 import Outcome from '../../assets/outcome.svg';
 
-import { Container, TypeContainer, TypeText } from './styles';
+import { Container, TypeContainer, TypeText, InvisibleInput } from './styles';
 
-const TypeSelector: React.FC = () => {
+interface InputProps extends TextInputProps {
+  name: string;
+}
+
+const TypeSelector: React.FC<InputProps> = ({ name }: InputProps) => {
+  const { registerField, defaultValue = 'income', fieldName } = useField(name);
+  const inputRef = useRef<any>({ value: defaultValue });
   const [selectedType, setSelectedType] = useState<'income' | 'outcome'>(
     'income',
   );
+
+  useEffect(() => {
+    registerField<string>({
+      name: fieldName,
+      ref: inputRef.current,
+      path: 'value',
+    });
+  }, [fieldName, registerField]);
+
+  const handleTypeSelection = useCallback((type: 'income' | 'outcome') => {
+    setSelectedType(type);
+    inputRef.current.value = type;
+  }, []);
 
   return (
     <Container>
       <TypeContainer
         type="income"
         selectedType={selectedType}
-        onPress={() => setSelectedType('income')}
+        onPress={() => handleTypeSelection('income')}
       >
         <Income />
         <TypeText>Income</TypeText>
@@ -23,11 +46,13 @@ const TypeSelector: React.FC = () => {
       <TypeContainer
         type="outcome"
         selectedType={selectedType}
-        onPress={() => setSelectedType('outcome')}
+        onPress={() => handleTypeSelection('outcome')}
       >
         <Outcome />
         <TypeText>Outcome</TypeText>
       </TypeContainer>
+
+      <InvisibleInput ref={inputRef} defaultValue={defaultValue} />
     </Container>
   );
 };
