@@ -10,10 +10,12 @@ import {
   LastTransaction,
 } from './styles';
 
+import formatValue from '../../utils/formatValue';
+
 interface CardProps {
   title: string;
   icon: React.FC;
-  ammount: string;
+  ammount: number;
   lastTransactionSentence: string;
   total?: boolean;
 }
@@ -34,7 +36,7 @@ const Card: React.FC<CardProps> = ({
     </CardTitleContainer>
 
     <AmmountContainer>
-      <Ammount total={total && total}>{ammount}</Ammount>
+      <Ammount total={total && total}>{formatValue(ammount)}</Ammount>
       <LastTransaction total={total && total}>
         {lastTransactionSentence}
       </LastTransaction>
