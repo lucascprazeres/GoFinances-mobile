@@ -1,5 +1,5 @@
 <h1 align=center>
-  <img src=".github/logo.png" />
+  💲 GoFinances 💲
 </h2>
 
 <h3 align=center>
