@@ -5,7 +5,6 @@ import { FlatList } from 'react-native';
 export const Container = styled.ScrollView.attrs({
   showsVerticalScrollIndicator: false,
 })`
-  flex: 1;
   margin-bottom: 32px;
 `;
 
@@ -33,7 +32,14 @@ export const Title = styled.Text`
   margin-left: 24px;
 `;
 
-export const TransactionList = styled(FlatList)`
-  width: 88%;
-  margin: 30px 24px;
+export const TransactionList = styled(FlatList).attrs({
+  showsVerticalScrollIndicator: false,
+})`
+  width: 100%;
+  margin: 0 auto;
+`;
+
+export const Footer = styled.View`
+  width: 100%;
+  margin-bottom: 64px;
 `;

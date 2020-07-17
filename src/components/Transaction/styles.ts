@@ -5,10 +5,9 @@ interface AmmountProps {
 }
 
 export const Container = styled.View`
-  width: 100%;
+  width: 88%;
+  margin: 0 auto 8px;
   height: 128px;
-
-  margin: 8px 0;
 
   background-color: #fff;
   border-radius: 5px;

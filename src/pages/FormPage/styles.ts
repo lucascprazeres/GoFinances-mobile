@@ -3,10 +3,11 @@ import styled from 'styled-components/native';
 import { RectButton } from 'react-native-gesture-handler';
 
 export const Container = styled.View`
-  flex: 1;
+  flex-grow: 1;
+  flex-shrink: 0;
 `;
 
-export const Content = styled.View`
+export const Content = styled.KeyboardAvoidingView`
   width: 88%;
   margin: 24px;
 `;

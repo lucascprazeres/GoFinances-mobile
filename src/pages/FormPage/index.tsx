@@ -1,5 +1,5 @@
-import React, { useRef, useCallback } from 'react';
-import { TextInput, Alert } from 'react-native';
+import React, { useRef, useCallback, useState } from 'react';
+import { TextInput, Alert, Keyboard } from 'react-native';
 
 import { useNavigation } from '@react-navigation/native';
 
@@ -15,32 +15,31 @@ import { Container, Content, Title, Button, ButtonText } from './styles';
 
 import api from '../../services/api';
 
-interface FormdData {
-  title: string;
-  type: 'income' | 'outcome';
-  value: number;
-  category: string;
-}
-
 const FormPage: React.FC = () => {
   const formRef = useRef<FormHandles>(null);
   const valueInputRef = useRef<TextInput>(null);
   const categoryInputRef = useRef<TextInput>(null);
 
+  const [showNavigation, setShowNavigation] = useState(true);
+
   const navigator = useNavigation();
 
-  const handleFormSubmit = useCallback(async (data: FormData) => {
-    console.log(data);
+  const handleFormSubmit = useCallback(
+    async (data: FormData) => {
+      await api.post('transactions', data);
 
-    await api.post('transactions', data);
+      Alert.alert(
+        'Transação realizada com sucesso!',
+        'Você pode verificar as informações dela na página inicial!',
+      );
 
-    Alert.alert(
-      'Transação realizada com sucesso!',
-      'Você pode verificar as informações dela na página inicial!',
-    );
+      navigator.navigate('Dashboard');
+    },
+    [navigator],
+  );
 
-    navigator.goBack();
-  }, []);
+  Keyboard.addListener('keyboardDidShow', () => setShowNavigation(false));
+  Keyboard.addListener('keyboardDidHide', () => setShowNavigation(true));
 
   return (
     <>
@@ -76,8 +75,8 @@ const FormPage: React.FC = () => {
             </Button>
           </Form>
         </Content>
+        <Navigator currentPage="FormPage" />
       </Container>
-      <Navigator currentPage="FormPage" />
     </>
   );
 };

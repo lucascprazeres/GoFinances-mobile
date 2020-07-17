@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import { View } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 
 import ListSVG from '../../assets/listagem.svg';

@@ -1,7 +1,5 @@
 import styled, { css } from 'styled-components/native';
 
-import ListSVG from '../../assets/listagem.svg';
-
 interface NavigatorProps {
   active?: boolean;
 }
