@@ -95,5 +95,8 @@ git commit -m 'conte o que você fez'
 git push origin <sua-branch>
 ```
 
+<h2>📝 Licença</h2>
+Esse projeto se encontra sob a licença <strong>MIT</strong>. Para mais informações, acesse o arquivo <strong>LICENSE</strong>.
+
 <hr>
 <p align=center>Made with 💜 by <a href="https://www.linkedin.com/in/lucas-prazeres/">Lucas dos Prazeres</a><p>
