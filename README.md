@@ -1,23 +1,22 @@
 <h1 align=center>
   💲 GoFinances 💲
-</h2>
+</h1>
 
 <h3 align=center>
-  Gerencie suas transações de maneira inteligente
+  Manage your transactions intelligently
 </h3>
 
-<h2>Preview do projeto 🚀</h2>
+<h2>Project Preview 🚀</h2>
 
 <div align=center>
   <img width="250" src=".github/gofinances.gif"/>
 </div>
 
+<h2>About 🕵️</h2>
 
-<h2>Sobre 🕵️</h2>
+<p>GoFinances is a great alternative for tracking financial transactions. It provides a detailed description of the records created and a balance of values in a simple and elegant way.<p>
 
-<p>O gofinances é uma ótima alternativa para acompanhamento de transações financeiras. Ele fornece uma descrição dos registros criados e  um balanço dos valores, para você, de forma simples e elegante.<p>
-
-<h2>Tecnologias utilizadas 🤯</h2>
+<h2>Technologies Used 🤯</h2>
 
 <ul>
   <li><a href="https://www.typescriptlang.org/">TypeScript</a></li>
@@ -26,39 +25,39 @@
   <li><a href="https://reactnavigation.org/">React-Navigation</a></li>
 </ul>
 
-<h2>Requisitos de software 🔍</h2>
+<h2>Software Requirements 🔍</h2>
 
-<li><a href="https://yarnpkg.com/">Instalar o yarn</a></li>
-<li><a href="https://react-native.rocketseat.dev/">Instalar e configurar o Android Studio (opcional)</a></li>
-<li><a href="https://github.com/lucascprazeres/GoFinances-server">Baixar e configurar o backend da aplicação</a></li>
+<li><a href="https://yarnpkg.com/">Install Yarn</a></li>
+<li><a href="https://react-native.rocketseat.dev/">Install and configure Android Studio (optional)</a></li>
+<li><a href="https://github.com/lucascprazeres/GoFinances-server">Download and set up the application backend</a></li>
 
-<h2><strike>Não</strike> Tente isso em casa! ⚠️</h2>
+<h2><strike>Don’t</strike> Try This at Home! ⚠️</h2>
 
-<p>Para rodar o projeto, basta executar os seguintes comandos, em seu terminal com git</p>
+<p>To run the project, execute the following commands in your terminal with Git</p>
 
 ```bash
-  # Faça um clone do repositório
+  # Clone the repository
 
-  git clone <link-do-repositório>
+  git clone <repository-link>
 
-  # Navegue até a pasta do projeto e baixe as dependências
+  # Navigate to the project folder and install the dependencies
 
   cd GoFinances-mobile && yarn
 
-  # Rode o metro bundler
+  # Start the Metro Bundler
 
   yarn start
 
-  # E, em outro terminal, execute
+  # In another terminal, run
 
-  yarn android # ou yarn ios
+  yarn android # or yarn ios
 ```
 
-<p><em>Obs: É muito importante que o back-end esteja rodando, quando você inciar o app</em></p>
+<p><em>Note: It is very important to have the backend running before you start the app.</em></p> 
 
-<h3><li> Nota do autor</li></h3>
+<h3><li> Author's Note</li></h3> 
 
-<p>Dentro da pasta do projeto, em src/services/api.ts, você vai encontrar a configuração que conecta o app ao back-end. Ele vai ser assim:</p>
+<p>Inside the project folder, in src/services/api.ts, you'll find the configuration that connects the app to the backend. It looks like this:</p>
 
 ```typescript
 import axios from 'axios';
@@ -70,33 +69,34 @@ const api = axios.create({
 export default api;
 ```
 
-<p>Se você estiver rodando o projeto dentro do Android Studio, troque o campo "um-ip-qualquer", junto com os sinais de maior e menor, por "10.0.2.2", que equivale ao localhost, dentro da plataforma. Porém, se você decidir rodar o app em seu dispositivo físico, subistitua esse campo pelo ip atual do seu computador.
-</p>
+<p>If you're running the project within Android Studio, replace the "some-ip" field (along with the angle brackets) with "10.0.2.2," which corresponds to localhost within the platform. However, if you decide to run the app on a physical device, replace this field with your computer's current IP address. </p> 
 
-<h2>Como contribuir? 😍</h2>
+<h2>How to Contribute? 😍</h2> 
 
-<p>Além de marcar o repositório com uma ⭐, para aumentar sua visibilidade, você pode fazer um fork do projeto, executar os passos anteriores, e</p>
+<p>In addition to starring the repository ⭐ to increase its visibility, you can fork the project, follow the steps above, and</p>
 
 ```bash
-# Dentro da pasta do seu fork, crie uma branch para fazer as alterações
+# Inside your fork's folder, create a branch to make your changes
 
-git checkout -b <sua-branch>
+git checkout -b <your-branch>
 
-# Faça suas alterações
+# Make your changes
 # ...
 
-# Faça um commit do que foi feito
+# Commit your changes
 
 git add .
-git commit -m 'conte o que você fez'
+git commit -m 'describe what you did'
 
-# Faça o push do que foi feito
+# Push your changes
 
-git push origin <sua-branch>
+git push origin <your-branch>
 ```
 
-<h2>📝 Licença</h2>
-Esse projeto se encontra sob a licença <strong>MIT</strong>. Para mais informações, acesse o arquivo <strong>LICENSE</strong>.
+<h2>📝 License</h2> 
 
-<hr>
-<p align=center>Made with 💜 by <a href="https://www.linkedin.com/in/lucas-prazeres/">Lucas dos Prazeres</a><p>
+This project is licensed under the <strong>MIT</strong> License. For more details, see the <strong>LICENSE</strong> file. 
+
+<hr> 
+
+<p align=center>Made with 💜 by <a href="https://www.linkedin.com/in/lucas-prazeres/">Lucas dos Prazeres</a><p> 
